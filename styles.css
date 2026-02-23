@@ -348,14 +348,14 @@ a:hover {
 
 /* ────── VISITOR LOG (Footer) ────── */
 .visitor-log-section {
-    margin: 24px 0;
-    padding: 20px;
+    margin: 32px auto;
+    padding: 24px;
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: var(--border-radius);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
 }
 
 .visitor-log-title {
@@ -447,12 +447,13 @@ a:hover {
     margin: 0 auto;
     padding: 0 24px;
     height: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    justify-content: space-between;
 }
 
 .nav-logo {
+    justify-self: start;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -482,6 +483,7 @@ a:hover {
 .nav-links {
     display: flex;
     gap: 32px;
+    justify-self: center;
 }
 
 .nav-link {
@@ -517,6 +519,7 @@ a:hover {
 }
 
 .nav-actions {
+    justify-self: end;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -733,13 +736,16 @@ a:hover {
     flex-wrap: wrap;
     gap: 16px;
     justify-content: center;
+    align-items: stretch;
 }
 
 .btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     padding: 14px 28px;
+    min-height: 52px;
     border-radius: 50px;
     font-family: var(--font-main);
     font-weight: 600;
@@ -748,6 +754,7 @@ a:hover {
     border: none;
     transition: all var(--transition-fast);
     text-decoration: none;
+    line-height: normal;
 }
 
 .btn-primary {
@@ -1058,8 +1065,14 @@ a:hover {
 /* ────── SKILLS SECTION ────── */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 24px;
+}
+
+.skills-grid .glass-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .skill-cat-header {
@@ -1143,16 +1156,25 @@ a:hover {
 
 /* ────── CERTIFICATIONS ────── */
 .cert-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 24px;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 24px !important;
+    justify-content: center !important;
+    width: 100% !important;
 }
 
 .cert-card {
+    flex: 0 1 320px !important;
     text-align: center;
     padding: 36px 24px;
     cursor: pointer;
     transition: all var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
 }
 
 .cert-card:hover {
@@ -1309,7 +1331,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0;
+    gap: 10px;
 }
 
 .topo-device {
@@ -1347,9 +1369,12 @@ a:hover {
 }
 
 .config-tabs {
-    display: flex;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
     border-bottom: 1px solid var(--border-color);
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.2) !important;
+    width: 100% !important;
 }
 
 .config-tab {
@@ -1921,9 +1946,14 @@ a:hover {
     }
 
     .skills-grid,
-    .knowledge-grid,
-    .cert-gallery {
+    .knowledge-grid {
         grid-template-columns: 1fr;
+    }
+
+    .cert-gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     #live-terminal {
