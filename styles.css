@@ -1156,21 +1156,22 @@ a:hover {
 
 /* ────── CERTIFICATIONS ────── */
 #certifications .cert-gallery {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 24px !important;
-    justify-content: center !important;
+    display: block !important;
+    text-align: center !important;
     width: 100% !important;
     margin: 0 auto !important;
 }
 
 #certifications .cert-card {
-    flex: 0 1 300px !important;
-    display: flex !important;
+    display: inline-flex !important;
+    vertical-align: top !important;
+    margin: 12px !important;
     flex-direction: column !important;
     justify-content: space-between !important;
     align-items: center !important;
+    width: 300px !important;
     height: auto !important;
+    text-align: center !important;
 }
 
 .cert-card:hover {
@@ -1365,12 +1366,16 @@ a:hover {
 }
 
 #projects .config-tabs {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    display: block !important;
+    text-align: center !important;
     border-bottom: 1px solid var(--border-color);
-    background: rgba(0, 0, 0, 0.25) !important;
+    background: rgba(0, 0, 0, 0.3) !important;
     width: 100% !important;
+}
+
+.config-tab {
+    display: inline-block !important;
+    margin: 0 5px !important;
 }
 
 .config-tab {
