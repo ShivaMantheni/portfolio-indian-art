@@ -1,45 +1,58 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shivakumar M | Infrastructure Architect & Software Engineer</title>
+    <title>Shivakumar M | Network Engineer & Developer Portfolio</title>
     <meta name="description"
-        content="Professional portfolio of Shivakumar M. Expert in Network Infrastructure, Cloud Solutions, and Full-Stack Development.">
-
-    <!-- Premium Fonts -->
+        content="Architecting Secure, Scalable Networks | Cisco & Cloud Specialist. Explore my projects, skills, and certifications.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <!-- ═══════════════════ PREMIUM LOADER ═══════════════════ -->
+    <!-- ═══════════════════ WAVE LOADER ═══════════════════ -->
     <div id="loader-overlay">
-        <div class="loader-content">
-            <div class="loader-logo">SHIVA<span class="logo-accent">.</span>M</div>
-            <div class="loader-line-container">
-                <div id="loader-line-fill" class="loader-line-fill"></div>
+        <div class="wave-loader">
+            <div class="wave-spinner">
+                <svg class="spinner-svg" viewBox="0 0 66 66">
+                    <circle class="spinner-ring ring-1" cx="33" cy="33" r="28" fill="none" stroke-width="4"></circle>
+                    <circle class="spinner-ring ring-2" cx="33" cy="33" r="20" fill="none" stroke-width="3"></circle>
+                    <circle class="spinner-ring ring-3" cx="33" cy="33" r="12" fill="none" stroke-width="2"></circle>
+                </svg>
             </div>
-            <p id="loader-percent" style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">
-                0%</p>
+            <div class="wave-bars">
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+            </div>
+        </div>
+        <div class="loader-text">
+            <span id="loader-percent">0%</span>
+            <p class="loader-subtitle">Loading Portfolio...</p>
         </div>
     </div>
 
-    <!-- ═══════════════════ VISITOR MODAL ═══════════════════ -->
+    <!-- ═══════════════════ VISITOR WELCOME MODAL ═══════════════════ -->
     <div id="visitor-modal" class="visitor-modal-hidden">
         <div class="visitor-modal-card glass-card">
-            <h3>Hello <span class="logo-accent">.</span></h3>
-            <p>I track my profile impact. Please share your name to be included in the visitor registry.</p>
-            <div style="margin: 20px 0;">
-                <input type="text" id="visitor-name-input" placeholder="Enter Full name"
-                    style="width:100%; padding:14px; border-radius:6px; border:1px solid var(--border); background:var(--bg-dark); color:var(--text-main); font-family:var(--font-ui);">
+            <h3>🙏 Welcome to My Portfolio!</h3>
+            <p>I'd love to know who's visiting. Enter your name to leave your mark!</p>
+            <div class="form-group">
+                <input type="text" id="visitor-name-input" placeholder="Your name" autocomplete="name">
             </div>
-            <div class="visitor-modal-actions" style="display:flex; gap:12px;">
-                <button class="btn btn-primary" id="visitor-submit" style="flex:1;">Submit Credentials</button>
+            <div class="visitor-modal-actions">
+                <button class="btn btn-primary" id="visitor-submit">Enter Portfolio ✦</button>
                 <button class="btn btn-outline" id="visitor-skip">Skip</button>
             </div>
         </div>
@@ -47,80 +60,123 @@
 
     <!-- ═══════════════════ NAVIGATION ═══════════════════ -->
     <nav id="main-nav">
-        <div class="container nav-container">
+        <div class="nav-container">
             <a href="#hero" class="nav-logo">
-                SHIVA<span class="logo-accent">M</span>.
+                <span class="logo-symbol">✦</span>
+                <span class="logo-text">Shivakumar</span>
             </a>
             <div class="nav-links" id="nav-links">
                 <a href="#about" class="nav-link" data-section="about">About</a>
-                <a href="#skills" class="nav-link" data-section="skills">Capabilities</a>
+                <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+                <a href="#certifications" class="nav-link" data-section="certifications">Certs</a>
                 <a href="#projects" class="nav-link" data-section="projects">Projects</a>
                 <a href="#knowledge" class="nav-link" data-section="knowledge">Lab</a>
-                <a href="#contact" class="nav-link" data-section="contact">Inquiry</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
             </div>
             <div class="nav-actions">
-                <button id="theme-toggle" class="btn-icon" aria-label="Toggle theme">🌓</button>
-                <button id="terminal-toggle" class="btn-icon" aria-label="Open CLI">⌨️</button>
+                <button id="theme-toggle" class="btn-icon" aria-label="Toggle theme">
+                    <span class="sun-icon">☀️</span>
+                    <span class="moon-icon">🌙</span>
+                </button>
+                <button id="terminal-toggle" class="btn-icon" aria-label="Open terminal" title="Open Terminal">
+                    <span>⌨️</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
     </nav>
 
     <!-- ═══════════════════ HERO SECTION ═══════════════════ -->
-    <section id="hero" class="hero-section">
-        <div class="hero-art-texture"></div>
-        <div class="hero-glow"></div>
-        <div class="container hero-content">
-            <span class="hero-sub animate-in">Infrastructure Architect × Software Engineer</span>
+    <section id="hero" class="section hero-section">
+        <div class="hero-bg-art"></div>
+        <div class="hero-particles" id="hero-particles"></div>
+        <div class="hero-content">
+            <div class="hero-badge animate-in">
+                <span class="badge-dot"></span>
+                Available for opportunities
+            </div>
             <h1 class="hero-title animate-in">
-                Building <span class="hero-name">Resilient</span> System Networks<span class="logo-accent">.</span>
+                <span class="hero-greeting">Namaste 🙏 I'm</span>
+                <span class="hero-name">Shivakumar M</span>
+                <span class="hero-tagline" id="typed-tagline"></span>
             </h1>
-            <p class="hero-tag animate-in">
-                Specializing in Cisco enterprise infrastructure, scalable cloud environments, and high-performance
-                software automation. Currently architecting secure network solutions for the next generation.
+            <p class="hero-description animate-in">
+                Architecting Secure, Scalable Networks | Cisco & Cloud Specialist | Software Developer
             </p>
-            <div class="hero-actions animate-in">
-                <a href="#projects" class="btn btn-primary">Download Case Studies</a>
-                <a href="#contact" class="btn btn-outline">Schedule Consultation</a>
+            <div class="hero-stats animate-in">
+                <div class="stat-card">
+                    <span class="stat-value" id="experience-counter">Calculating...</span>
+                    <span class="stat-label">Experience</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">10+</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">5+</span>
+                    <span class="stat-label">Certifications</span>
+                </div>
+            </div>
+            <div class="hero-cta animate-in">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View My Work</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a href="#contact" class="btn btn-secondary" id="collab-btn">
+                    <span>🤝 Let's Build Together</span>
+                </a>
+                <a href="#" class="btn btn-outline" id="resume-btn">
+                    <span>📄 Download Resume</span>
+                </a>
             </div>
         </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll Down</span>
+        </div>
     </section>
+
+    <!-- ═══════════════════ SECTION DIVIDER ═══════════════════ -->
+    <div class="rangoli-divider">
+        <img src="assets/images/rangoli_divider.png" alt="Rangoli Divider" loading="lazy">
+    </div>
 
     <!-- ═══════════════════ ABOUT SECTION ═══════════════════ -->
     <section id="about" class="section">
-        <div class="container about-grid">
-            <div class="about-text animate-on-scroll">
-                <h2>Strategic <span class="logo-accent">Vision</span>.</h2>
-                <p>I bridge the gap between low-level hardware configuration and high-level software logic. With over a
-                    year of deep technical specialization, I focus on creating systems that are not just functional, but
-                    inherently secure and scalable.</p>
-
-                <div class="stat-grid">
-                    <div class="stat-item">
-                        <span class="stat-num" id="experience-counter">...</span>
-                        <span class="stat-label">Tenure</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-num">12+</span>
-                        <span class="stat-label">Deployments</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-num">5+</span>
-                        <span class="stat-label">Certifications</span>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-symbol">✦</span>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">The person behind the code</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card glass-card animate-on-scroll">
+                    <div class="about-image-frame">
+                        <div class="mandala-border"></div>
+                        <div class="about-avatar">👨‍💻</div>
                     </div>
                 </div>
-            </div>
-
-            <div class="about-details animate-on-scroll">
-                <div class="glass-card">
-                    <h3 style="margin-bottom: 16px;">Professional Timeline</h3>
-                    <div style="border-left: 2px solid var(--accent); padding-left: 24px;">
-                        <div style="margin-bottom: 24px;">
-                            <h4 style="font-size: 1rem;">Solutions Engineer</h4>
-                            <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent);">June 2024
-                                — Present</p>
-                            <p style="font-size: 0.9rem; color: var(--text-sub); margin-top: 8px;">Designing
-                                enterprise-grade network architectures and developing custom automation suites for
-                                provisioning.</p>
+                <div class="about-info animate-on-scroll">
+                    <h3>Network Engineer & Software Developer</h3>
+                    <p>Passionate about building secure, scalable networks and developing innovative software solutions.
+                        With expertise spanning from Cisco infrastructure to full-stack development, I bridge the gap
+                        between networking and software engineering.</p>
+                    <div class="experience-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Network Engineer / Software Developer</h4>
+                                <span class="timeline-date">June 2024 – Present</span>
+                                <span class="timeline-auto" id="auto-tenure">(Calculating...)</span>
+                                <ul>
+                                    <li>Designed & implemented enterprise network architectures</li>
+                                    <li>Developed automation scripts for network provisioning</li>
+                                    <li>Collaborated on full-stack web applications</li>
+                                    <li>Configured routing protocols (OSPF, EIGRP, BGP)</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -128,68 +184,569 @@
         </div>
     </section>
 
-    <div class="rangoli-divider"></div>
+    <div class="rangoli-divider"><img src="assets/images/rangoli_divider.png" alt="" loading="lazy"></div>
 
-    <!-- ═══════════════════ CAPABILITIES ═══════════════════ -->
+    <!-- ═══════════════════ SKILLS SECTION ═══════════════════ -->
     <section id="skills" class="section">
         <div class="container">
-            <h2 class="section-title">Core <span class="logo-accent">Stack</span>.</h2>
-            <div class="projects-grid">
-                <div class="glass-card animate-on-scroll">
-                    <span class="project-label">Networking</span>
-                    <h3 class="project-title">Infrastructure</h3>
-                    <p style="color:var(--text-sub); font-size:0.9rem;">Cisco Catalyst & Nexus, OSPF/BGP Routing, MPLS,
-                        Segment Routing, Network Security (ACLs/Firewalls).</p>
+            <div class="section-header">
+                <span class="section-symbol">❖</span>
+                <h2 class="section-title">Tech Stack</h2>
+                <p class="section-subtitle">Skills & Technologies</p>
+            </div>
+            <div class="skills-grid">
+                <!-- Programming Languages -->
+                <div class="skill-category glass-card animate-on-scroll">
+                    <div class="skill-cat-header">
+                        <span class="skill-cat-icon">💻</span>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-level="90">Java</span>
+                        <span class="skill-tag" data-level="85">Python</span>
+                        <span class="skill-tag" data-level="80">JavaScript</span>
+                        <span class="skill-tag" data-level="70">C++</span>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar"><span class="skill-name">Java</span>
+                            <div class="bar">
+                                <div class="bar-fill" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar"><span class="skill-name">Python</span>
+                            <div class="bar">
+                                <div class="bar-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar"><span class="skill-name">JavaScript</span>
+                            <div class="bar">
+                                <div class="bar-fill" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar"><span class="skill-name">C++</span>
+                            <div class="bar">
+                                <div class="bar-fill" data-width="70"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="glass-card animate-on-scroll">
-                    <span class="project-label">Development</span>
-                    <h3 class="project-title">Engineering</h3>
-                    <p style="color:var(--text-sub); font-size:0.9rem;">Java Spring Boot, Python Automation
-                        (Netmiko/Nornir), React.js, CI/CD Pipelines.</p>
+
+                <!-- Web Development -->
+                <div class="skill-category glass-card animate-on-scroll">
+                    <div class="skill-cat-header">
+                        <span class="skill-cat-icon">🌐</span>
+                        <h3>Web Development</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-level="95">HTML5</span>
+                        <span class="skill-tag" data-level="90">CSS3</span>
+                        <span class="skill-tag" data-level="85">Bootstrap 5</span>
+                        <span class="skill-tag" data-level="75">React</span>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar"><span class="skill-name">HTML5</span>
+                            <div class="bar">
+                                <div class="bar-fill" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar"><span class="skill-name">CSS3</span>
+                            <div class="bar">
+                                <div class="bar-fill" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar"><span class="skill-name">Bootstrap 5</span>
+                            <div class="bar">
+                                <div class="bar-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar"><span class="skill-name">React</span>
+                            <div class="bar">
+                                <div class="bar-fill" data-width="75"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="glass-card animate-on-scroll">
-                    <span class="project-label">Cloud</span>
-                    <h3 class="project-title">Architecture</h3>
-                    <p style="color:var(--text-sub); font-size:0.9rem;">AWS VPC Design, EC2, Lambda, Docker
-                        Containerization, Linux System Administration.</p>
+
+                <!-- Networking -->
+                <div class="skill-category glass-card animate-on-scroll">
+                    <div class="skill-cat-header">
+                        <span class="skill-cat-icon">🔗</span>
+                        <h3>Networking</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-level="90">Cisco Packet Tracer</span>
+                        <span class="skill-tag" data-level="85">Routing & Switching</span>
+                        <span class="skill-tag" data-level="80">OSPF</span>
+                        <span class="skill-tag" data-level="80">VLANs</span>
+                        <span class="skill-tag" data-level="75">ACLs</span>
+                        <span class="skill-tag" data-level="70">BGP</span>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar"><span class="skill-name">Packet Tracer</span>
+                            <div class="bar">
+                                <div class="bar-fill" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar"><span class="skill-name">Routing</span>
+                            <div class="bar">
+                                <div class="bar-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar"><span class="skill-name">OSPF</span>
+                            <div class="bar">
+                                <div class="bar-fill" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar"><span class="skill-name">VLANs</span>
+                            <div class="bar">
+                                <div class="bar-fill" data-width="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud & Tools -->
+                <div class="skill-category glass-card animate-on-scroll">
+                    <div class="skill-cat-header">
+                        <span class="skill-cat-icon">☁️</span>
+                        <h3>Cloud & Tools</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-level="75">AWS</span>
+                        <span class="skill-tag" data-level="80">Git & GitHub</span>
+                        <span class="skill-tag" data-level="70">Docker</span>
+                        <span class="skill-tag" data-level="65">Linux</span>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar"><span class="skill-name">AWS</span>
+                            <div class="bar">
+                                <div class="bar-fill" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar"><span class="skill-name">Git</span>
+                            <div class="bar">
+                                <div class="bar-fill" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar"><span class="skill-name">Docker</span>
+                            <div class="bar">
+                                <div class="bar-fill" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar"><span class="skill-name">Linux</span>
+                            <div class="bar">
+                                <div class="bar-fill" data-width="65"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="rangoli-divider"></div>
+    <div class="rangoli-divider"><img src="assets/images/rangoli_divider.png" alt="" loading="lazy"></div>
 
-    <!-- ═══════════════════ CASE STUDIES ═══════════════════ -->
+    <!-- ═══════════════════ CERTIFICATIONS ═══════════════════ -->
+    <section id="certifications" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-symbol">🏅</span>
+                <h2 class="section-title">Certifications</h2>
+                <p class="section-subtitle">Verified credentials & achievements</p>
+            </div>
+            <div class="cert-gallery">
+                <div class="cert-card glass-card animate-on-scroll" data-tilt>
+                    <div class="cert-icon">
+                        <svg viewBox="0 0 80 80" class="cert-svg cisco-logo">
+                            <rect x="5" y="25" width="8" height="30" rx="2" fill="currentColor" />
+                            <rect x="18" y="15" width="8" height="40" rx="2" fill="currentColor" />
+                            <rect x="31" y="25" width="8" height="30" rx="2" fill="currentColor" />
+                            <rect x="44" y="15" width="8" height="40" rx="2" fill="currentColor" />
+                            <rect x="57" y="25" width="8" height="30" rx="2" fill="currentColor" />
+                            <rect x="70" y="15" width="8" height="40" rx="2" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <h3 class="cert-title">CCNA</h3>
+                    <p class="cert-issuer">Cisco Systems</p>
+                    <span class="cert-badge">Verified ✓</span>
+                    <a href="#" class="cert-verify-link">Verify Credential →</a>
+                </div>
+                <div class="cert-card glass-card animate-on-scroll" data-tilt>
+                    <div class="cert-icon">
+                        <svg viewBox="0 0 80 80" class="cert-svg comptia-logo">
+                            <polygon points="40,5 75,60 5,60" fill="none" stroke="currentColor" stroke-width="4" />
+                            <text x="40" y="48" text-anchor="middle" fill="currentColor" font-size="14"
+                                font-weight="bold">A+</text>
+                        </svg>
+                    </div>
+                    <h3 class="cert-title">CompTIA A+</h3>
+                    <p class="cert-issuer">CompTIA</p>
+                    <span class="cert-badge">Verified ✓</span>
+                    <a href="#" class="cert-verify-link">Verify Credential →</a>
+                </div>
+                <div class="cert-card glass-card animate-on-scroll" data-tilt>
+                    <div class="cert-icon">
+                        <svg viewBox="0 0 80 80" class="cert-svg aws-logo">
+                            <path d="M10 50 Q40 20 70 50" fill="none" stroke="currentColor" stroke-width="4" />
+                            <path d="M20 55 Q40 35 60 55" fill="none" stroke="currentColor" stroke-width="3" />
+                            <text x="40" y="72" text-anchor="middle" fill="currentColor" font-size="12"
+                                font-weight="bold">AWS</text>
+                        </svg>
+                    </div>
+                    <h3 class="cert-title">AWS Cloud Practitioner</h3>
+                    <p class="cert-issuer">Amazon Web Services</p>
+                    <span class="cert-badge">Verified ✓</span>
+                    <a href="#" class="cert-verify-link">Verify Credential →</a>
+                </div>
+                <div class="cert-card glass-card animate-on-scroll" data-tilt>
+                    <div class="cert-icon">
+                        <svg viewBox="0 0 80 80" class="cert-svg net-logo">
+                            <polygon points="40,5 75,60 5,60" fill="none" stroke="currentColor" stroke-width="4" />
+                            <text x="40" y="48" text-anchor="middle" fill="currentColor" font-size="11"
+                                font-weight="bold">Net+</text>
+                        </svg>
+                    </div>
+                    <h3 class="cert-title">CompTIA Network+</h3>
+                    <p class="cert-issuer">CompTIA</p>
+                    <span class="cert-badge">Verified ✓</span>
+                    <a href="#" class="cert-verify-link">Verify Credential →</a>
+                </div>
+                <div class="cert-card glass-card animate-on-scroll" data-tilt>
+                    <div class="cert-icon">
+                        <svg viewBox="0 0 80 80" class="cert-svg python-logo">
+                            <circle cx="40" cy="40" r="30" fill="none" stroke="currentColor" stroke-width="4" />
+                            <text x="40" y="46" text-anchor="middle" fill="currentColor" font-size="14"
+                                font-weight="bold">Py</text>
+                        </svg>
+                    </div>
+                    <h3 class="cert-title">Python Professional</h3>
+                    <p class="cert-issuer">Python Institute</p>
+                    <span class="cert-badge">Verified ✓</span>
+                    <a href="#" class="cert-verify-link">Verify Credential →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="rangoli-divider"><img src="assets/images/rangoli_divider.png" alt="" loading="lazy"></div>
+
+    <!-- ═══════════════════ PROJECTS ═══════════════════ -->
     <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">Case <span class="logo-accent">Studies</span>.</h2>
-
+            <div class="section-header">
+                <span class="section-symbol">⚙️</span>
+                <h2 class="section-title">Project Showcase</h2>
+                <p class="section-subtitle">Problem → Solution → Result</p>
+            </div>
             <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="glass-card animate-on-scroll">
-                    <span class="project-label">Network Architecture</span>
-                    <h3 class="project-title">Enterprise Segmented Campus</h3>
-                    <div class="config-viewer">
-                        <div id="terminal-header" style="color:#666; margin-bottom:10px;">// Interactive Topology Config
+                <!-- Project 1: Enterprise Network -->
+                <div class="project-card glass-card animate-on-scroll">
+                    <div class="project-header">
+                        <span class="project-number">01</span>
+                        <h3 class="project-title">Enterprise Campus Network</h3>
+                        <span class="project-tag">Networking</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-psr">
+                            <div class="psr-item">
+                                <span class="psr-label">Problem</span>
+                                <p>Legacy flat network with no segmentation, causing broadcast storms and security
+                                    vulnerabilities.</p>
+                            </div>
+                            <div class="psr-item">
+                                <span class="psr-label">Solution</span>
+                                <p>Redesigned using VLANs, inter-VLAN routing, OSPF, and ACLs with a three-tier
+                                    hierarchical model.</p>
+                            </div>
+                            <div class="psr-item">
+                                <span class="psr-label">Result</span>
+                                <p>70% reduction in broadcast traffic, zero security incidents post-deployment, 99.9%
+                                    uptime.</p>
+                            </div>
                         </div>
-                        <pre style="color:var(--accent); overflow: auto;" id="active-code">
-! Core-Router Configuration
-hostname Core-Edge-01
+                        <!-- Interactive Config Viewer -->
+                        <div class="config-viewer">
+                            <div class="config-topology">
+                                <div class="topology-map">
+                                    <div class="topo-device" data-device="core-router" title="Click to view config">
+                                        <span class="device-icon">🔲</span>
+                                        <span class="device-label">Core Router</span>
+                                    </div>
+                                    <div class="topo-line"></div>
+                                    <div class="topo-device" data-device="dist-switch" title="Click to view config">
+                                        <span class="device-icon">🔳</span>
+                                        <span class="device-label">Dist Switch</span>
+                                    </div>
+                                    <div class="topo-line"></div>
+                                    <div class="topo-device" data-device="access-switch" title="Click to view config">
+                                        <span class="device-icon">🔳</span>
+                                        <span class="device-label">Access Switch</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="config-tabs">
+                                <button class="config-tab active" data-config="core-router">Core Router</button>
+                                <button class="config-tab" data-config="dist-switch">Dist Switch</button>
+                                <button class="config-tab" data-config="access-switch">Access Switch</button>
+                            </div>
+                            <div class="config-code-container">
+                                <pre class="config-code" id="config-core-router">
+! Core Router Configuration
+hostname CoreRouter-01
+!
 interface GigabitEthernet0/0
  ip address 10.0.0.1 255.255.255.0
- router ospf 1
-  network 10.0.0.0 0.0.0.255 area 0</pre>
+ no shutdown
+!
+router ospf 1
+ router-id 1.1.1.1
+ network 10.0.0.0 0.0.0.255 area 0
+ network 192.168.0.0 0.0.255.255 area 0
+!
+access-list 101 permit tcp any any eq 80
+access-list 101 permit tcp any any eq 443
+access-list 101 deny ip any any log
+!
+ip route 0.0.0.0 0.0.0.0 203.0.113.1
+end</pre>
+                                <pre class="config-code hidden" id="config-dist-switch">
+! Distribution Switch Configuration
+hostname DistSwitch-01
+!
+vlan 10
+ name ENGINEERING
+vlan 20
+ name MANAGEMENT
+vlan 30
+ name GUEST
+!
+interface Vlan10
+ ip address 192.168.10.1 255.255.255.0
+ ip helper-address 10.0.0.100
+!
+interface Vlan20
+ ip address 192.168.20.1 255.255.255.0
+!
+spanning-tree mode rapid-pvst
+spanning-tree vlan 10,20,30 priority 4096
+end</pre>
+                                <pre class="config-code hidden" id="config-access-switch">
+! Access Switch Configuration
+hostname AccessSwitch-01
+!
+interface range FastEthernet0/1-12
+ switchport mode access
+ switchport access vlan 10
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface range FastEthernet0/13-24
+ switchport mode access
+ switchport access vlan 20
+!
+interface GigabitEthernet0/1
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,30
+end</pre>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline btn-sm">
+                            📥 Download Lab File (.pkt)
+                        </a>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="glass-card animate-on-scroll">
-                    <span class="project-label">Software Engineering</span>
-                    <h3 class="project-title">Infrastructure-as-Code Suite</h3>
-                    <p style="color:var(--text-sub); margin-bottom:20px;">Automated configuration management for
-                        multi-vendor environments using Python and JSON templates.</p>
-                    <a href="#" class="btn btn-outline" style="padding: 10px 20px;">Review Repo</a>
+                <!-- Project 2: Web Application -->
+                <div class="project-card glass-card animate-on-scroll">
+                    <div class="project-header">
+                        <span class="project-number">02</span>
+                        <h3 class="project-title">Full-Stack Task Manager</h3>
+                        <span class="project-tag">Web Dev</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-psr">
+                            <div class="psr-item">
+                                <span class="psr-label">Problem</span>
+                                <p>Team lacked a centralized task tracking system, leading to missed deadlines and
+                                    duplicated work.</p>
+                            </div>
+                            <div class="psr-item">
+                                <span class="psr-label">Solution</span>
+                                <p>Built a full-stack web app with Java Spring Boot backend, REST APIs, and React
+                                    frontend with real-time updates.</p>
+                            </div>
+                            <div class="psr-item">
+                                <span class="psr-label">Result</span>
+                                <p>Team productivity increased 40%, task completion rate improved by 60%.</p>
+                            </div>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">Java</span>
+                            <span class="tech-badge">Spring Boot</span>
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">MySQL</span>
+                        </div>
+                        <a href="#" class="btn btn-outline btn-sm">
+                            🔗 View on GitHub
+                        </a>
+                    </div>
                 </div>
+
+                <!-- Project 3: Automation -->
+                <div class="project-card glass-card animate-on-scroll">
+                    <div class="project-header">
+                        <span class="project-number">03</span>
+                        <h3 class="project-title">Network Automation Suite</h3>
+                        <span class="project-tag">Python</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-psr">
+                            <div class="psr-item">
+                                <span class="psr-label">Problem</span>
+                                <p>Manual configuration of 50+ network devices was time-consuming and error-prone.</p>
+                            </div>
+                            <div class="psr-item">
+                                <span class="psr-label">Solution</span>
+                                <p>Developed Python scripts with Paramiko & Netmiko for automated config deployment and
+                                    compliance audits.</p>
+                            </div>
+                            <div class="psr-item">
+                                <span class="psr-label">Result</span>
+                                <p>Reduced config time from 8 hours to 15 minutes. Zero config drift detected after
+                                    automation.</p>
+                            </div>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Paramiko</span>
+                            <span class="tech-badge">Netmiko</span>
+                            <span class="tech-badge">YAML</span>
+                        </div>
+                        <a href="#" class="btn btn-outline btn-sm">
+                            🔗 View on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="rangoli-divider"><img src="assets/images/rangoli_divider.png" alt="" loading="lazy"></div>
+
+    <!-- ═══════════════════ KNOWLEDGE LAB ═══════════════════ -->
+    <section id="knowledge" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-symbol">📚</span>
+                <h2 class="section-title">Learning Lab</h2>
+                <p class="section-subtitle">Knowledge Cards & Digital Garden</p>
+            </div>
+            <div class="knowledge-grid">
+                <div class="knowledge-card glass-card animate-on-scroll">
+                    <div class="kc-header">
+                        <span class="kc-date">Feb 2026</span>
+                        <span class="kc-tag">Networking</span>
+                    </div>
+                    <h4>Explored Segment Routing</h4>
+                    <p>Implemented SR-MPLS lab with TI-LFA for fast reroute. Configuration snippet for IS-IS based
+                        segment routing on IOS-XE.</p>
+                    <div class="kc-snippet">
+                        <code>segment-routing mpls<br>&nbsp;connected-prefix-sid-map<br>&nbsp;&nbsp;address-family ipv4<br>&nbsp;&nbsp;&nbsp;10.1.1.1/32 index 100</code>
+                    </div>
+                </div>
+                <div class="knowledge-card glass-card animate-on-scroll">
+                    <div class="kc-header">
+                        <span class="kc-date">Jan 2026</span>
+                        <span class="kc-tag">Python</span>
+                    </div>
+                    <h4>Network Compliance Checker</h4>
+                    <p>Built a script that SSHs into devices, pulls running-config, and compares against a golden
+                        template using difflib.</p>
+                    <div class="kc-snippet">
+                        <code>import difflib<br>diff = difflib.unified_diff(<br>&nbsp;&nbsp;golden.splitlines(),<br>&nbsp;&nbsp;running.splitlines(),<br>&nbsp;&nbsp;lineterm=''<br>)</code>
+                    </div>
+                </div>
+                <div class="knowledge-card glass-card animate-on-scroll">
+                    <div class="kc-header">
+                        <span class="kc-date">Dec 2025</span>
+                        <span class="kc-tag">Cloud</span>
+                    </div>
+                    <h4>AWS VPC Deep Dive</h4>
+                    <p>Set up a multi-AZ VPC with public/private subnets, NAT Gateway, and VPC Flow Logs for monitoring.
+                    </p>
+                    <div class="kc-snippet">
+                        <code>aws ec2 create-vpc \<br>&nbsp;&nbsp;--cidr-block 10.0.0.0/16 \<br>&nbsp;&nbsp;--tag-specifications<br>&nbsp;&nbsp;'ResourceType=vpc,Tags=[{Key=Name,Value=ProdVPC}]'</code>
+                    </div>
+                </div>
+                <div class="knowledge-card glass-card animate-on-scroll">
+                    <div class="kc-header">
+                        <span class="kc-date">Nov 2025</span>
+                        <span class="kc-tag">Web Dev</span>
+                    </div>
+                    <h4>React State Management</h4>
+                    <p>Explored useReducer + Context API pattern as a lightweight alternative to Redux for medium
+                        complexity apps.</p>
+                    <div class="kc-snippet">
+                        <code>const [state, dispatch] = useReducer(<br>&nbsp;&nbsp;taskReducer,<br>&nbsp;&nbsp;initialState<br>);</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="rangoli-divider"><img src="assets/images/rangoli_divider.png" alt="" loading="lazy"></div>
+
+    <!-- ═══════════════════ CONTACT SECTION ═══════════════════ -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-symbol">✉️</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's collaborate on something amazing</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info animate-on-scroll">
+                    <h3>Ready to connect?</h3>
+                    <p>Whether you're looking for a network engineer, a developer, or someone who can do both — I'd love
+                        to hear from you.</p>
+                    <div class="contact-links">
+                        <a href="mailto:shivakumar@example.com" class="contact-link">
+                            <span class="cl-icon">📧</span>
+                            <span>shivakumar@example.com</span>
+                        </a>
+                        <a href="https://linkedin.com/in/shivakumar" class="contact-link" target="_blank">
+                            <span class="cl-icon">💼</span>
+                            <span>LinkedIn Profile</span>
+                        </a>
+                        <a href="https://github.com/shivakumar" class="contact-link" target="_blank">
+                            <span class="cl-icon">🐙</span>
+                            <span>GitHub Profile</span>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form glass-card animate-on-scroll" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="What's this about?">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5"
+                            placeholder="Tell me about your project or idea..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Send Message 🚀</span>
+                    </button>
+                    <div class="form-status" id="form-status"></div>
+                </form>
             </div>
         </div>
     </section>
@@ -197,29 +754,54 @@ interface GigabitEthernet0/0
     <!-- ═══════════════════ FOOTER ═══════════════════ -->
     <footer id="footer">
         <div class="container">
-            <div class="footer-grid">
+            <div class="footer-content">
                 <div class="footer-brand">
-                    <div class="loader-logo" style="margin-bottom: 20px;">SHIVA<span class="logo-accent">.</span>M</div>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">Architecting the digital foundation since
-                        2024.</p>
+                    <span class="logo-symbol">✦</span>
+                    <span>Shivakumar M</span>
                 </div>
-                <div class="footer-visitors">
-                    <h4 style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px;">
-                        Registry</h4>
-                    <div id="visit-count-badge" class="visit-count-badge">0 Visitors</div>
-                    <div id="visitor-log-list" style="margin-top: 10px; font-size: 0.8rem; color: var(--text-sub);">
+
+                <!-- Visitor Log Section -->
+                <div class="visitor-log-section">
+                    <h4 class="visitor-log-title">👁️ Portfolio Visitors <span id="visit-count-badge"
+                            class="visit-count-badge">0</span></h4>
+                    <div class="visitor-log-list" id="visitor-log-list">
+                        <p class="visitor-empty">No visitors yet. Be the first!</p>
                     </div>
                 </div>
-                <div class="footer-contact">
-                    <h4 style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px;">
-                        Contact</h4>
-                    <p style="font-size: 0.9rem;">shivakumar.m@example.com</p>
-                </div>
+
+                <p class="footer-copy">
+                    © <span id="current-year"></span> Shivakumar M. Crafted with ❤️ and Indian Art
+                </p>
             </div>
-            <p style="text-align: center; color: var(--text-muted); font-size: 0.75rem;">© 2026 Shivakumar M. All rights
-                reserved.</p>
         </div>
     </footer>
+
+    <!-- ═══════════════════ LIVE TERMINAL (Easter Egg) ═══════════════════ -->
+    <div id="live-terminal" class="terminal-hidden">
+        <div class="terminal-header">
+            <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <span class="terminal-title">shiva@portfolio ~ $</span>
+            <button class="terminal-close" id="terminal-close">✕</button>
+        </div>
+        <div class="terminal-body" id="terminal-body">
+            <div class="terminal-output" id="terminal-output">
+                <p class="term-welcome">Welcome to Shivakumar's Terminal! 🖥️</p>
+                <p class="term-help-hint">Type <span class="term-cmd">help</span> for available commands.</p>
+            </div>
+            <div class="terminal-input-line">
+                <span class="term-prompt">visitor@portfolio:~$</span>
+                <input type="text" id="terminal-input" class="term-input" autofocus autocomplete="off"
+                    spellcheck="false">
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════ BACK TO TOP ═══════════════════ -->
+    <button id="back-to-top" class="btn-icon back-to-top" aria-label="Back to top">↑</button>
 
     <script src="script.js"></script>
 </body>
