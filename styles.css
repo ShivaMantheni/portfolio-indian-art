@@ -1155,26 +1155,22 @@ a:hover {
 }
 
 /* ────── CERTIFICATIONS ────── */
-.cert-gallery {
+#certifications .cert-gallery {
     display: flex !important;
     flex-wrap: wrap !important;
     gap: 24px !important;
     justify-content: center !important;
     width: 100% !important;
+    margin: 0 auto !important;
 }
 
-.cert-card {
-    flex: 0 1 320px !important;
-    text-align: center;
-    padding: 36px 24px;
-    cursor: pointer;
-    transition: all var(--transition-normal);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: var(--bg-card);
-    border: 1px solid var(--glass-border);
-    border-radius: var(--border-radius);
+#certifications .cert-card {
+    flex: 0 1 300px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: auto !important;
 }
 
 .cert-card:hover {
@@ -1368,12 +1364,12 @@ a:hover {
     background: var(--border-color);
 }
 
-.config-tabs {
+#projects .config-tabs {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     border-bottom: 1px solid var(--border-color);
-    background: rgba(0, 0, 0, 0.2) !important;
+    background: rgba(0, 0, 0, 0.25) !important;
     width: 100% !important;
 }
 
